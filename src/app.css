@@ -1,0 +1,206 @@
+:root {
+  font-family: 'SF Pro Text', 'Segoe UI', system-ui, sans-serif;
+  color: #f6f8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #3c7fd9, #274792 45%, #152246 80%);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+.desktop {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(5, 8, 20, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.menu-bar {
+  margin: 0.5rem;
+  border-radius: 10px;
+  padding: 0.4rem 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.menu-left,
+.menu-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.apple-logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 110px 1fr 260px;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.desktop-icon {
+  border: none;
+  border-radius: 16px;
+  padding: 0.8rem 0.4rem;
+  display: grid;
+  gap: 0.25rem;
+  justify-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.desktop-icon .emoji {
+  font-size: 1.6rem;
+}
+
+.desktop-icon:hover {
+  transform: translateY(-2px);
+}
+
+.window-stack {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.window {
+  border-radius: 18px;
+  padding: 0.9rem;
+  max-width: 680px;
+}
+
+.window-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.window-toolbar small {
+  display: block;
+  opacity: 0.72;
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.light {
+  width: 12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+li {
+  padding: 0.2rem 0;
+}
+
+.terminal-content {
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: rgba(10, 12, 22, 0.75);
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 0.88rem;
+}
+
+.terminal-content p {
+  margin: 0.25rem 0;
+}
+
+.widget-panel {
+  display: grid;
+  align-content: start;
+  gap: 0.8rem;
+}
+
+.widget {
+  border-radius: 16px;
+  padding: 0.9rem;
+}
+
+.widget h3,
+.widget p {
+  margin: 0;
+}
+
+.widget-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.4rem 0 0.15rem;
+}
+
+.dock {
+  margin: 0.5rem auto 0.85rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 22px;
+  display: flex;
+  gap: 0.55rem;
+  width: fit-content;
+}
+
+.dock-app {
+  border: none;
+  border-radius: 14px;
+  width: 52px;
+  height: 52px;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.dock-app:hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+@media (max-width: 980px) {
+  .workspace {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .widget-panel {
+    display: none;
+  }
+}
