@@ -43,3 +43,12 @@ npm run preview    # preview production build
   ```bash
   npm run dev:codespace -- --port 4174
   ```
+
+
+- If `npm run build` reports dependency conflicts in Codespaces, reset install state and reinstall:
+
+  ```bash
+  rm -rf node_modules package-lock.json
+  npm install
+  npm run build
+  ```
