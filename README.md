@@ -27,6 +27,7 @@ This project is a macOS-style desktop UI built with **Svelte** and **Vite**.
 npm run dev        # local dev server
 npm run build      # production build
 npm run preview    # preview production build
+npm run check:conflicts  # detect unresolved git conflict markers
 ```
 
 ## Troubleshooting
@@ -52,3 +53,12 @@ npm run preview    # preview production build
   npm install
   npm run build
   ```
+
+
+- If you see `<<<<<<<`, `=======`, or `>>>>>>>` in files, run:
+
+  ```bash
+  npm run check:conflicts
+  ```
+
+  Then open each listed file and keep only the correct block before running build again.
